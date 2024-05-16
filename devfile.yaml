@@ -15,13 +15,13 @@ commands:
     exec:
       label: "Install dependencies the application"
       component: python
-      workingDir: /projects
+      workingDir: /projects/openshift-devspaces-fastapi
       commandLine: pip install -r requirements.txt
   - id: run
     exec:
       label: "Run the application"
       component: python
-      workingDir: /projects
+      workingDir: /projects/openshift-devspaces-fastapi
       commandLine: uvicorn hello-world:app --host 0.0.0.0 --port 5000
       group:
         kind: run
