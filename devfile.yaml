@@ -22,6 +22,6 @@ commands:
       label: "Run the application"
       component: python
       workingDir: /projects/openshift-devspaces-fastapi
-      commandLine: uvicorn hello-world:app --host 0.0.0.0 --port 5000 --reload
+      commandLine: python3 -m debugpy --listen 0.0.0.0:5678 -m uvicorn hello-world:app --host 0.0.0.0 --port 5000 --reload
       group:
         kind: run
